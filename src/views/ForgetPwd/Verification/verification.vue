@@ -94,5 +94,6 @@ export default {
 .Tips{
     font-size: 12px;
     color: gainsboro;
+    margin-top: 0.3rem;
 }
 </style>

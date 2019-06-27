@@ -5,12 +5,12 @@ import Register from './views/Register/register.vue'
 import ForgetPwd from './views/ForgetPwd/forgetPwd.vue'
 import Verification from './views/ForgetPwd/Verification/verification.vue'
 import SetPwd from './views/Register/SetPwd/setPwd.vue'
-import NoInt from './views/NoInt/NoInt.vue'
-import List from './views/List/List.vue'
-import PullRefresh from './views/PullRefresh/PullRefresh.vue'
+import NoInt from './views/NoInt/noInt.vue'
+import List from './views/List/list.vue'
+import PullRefresh from './views/PullRefresh/pullRefresh.vue'
 
 Vue.use(Router)
-
+ 
 
 const routes = [
 	{
@@ -22,11 +22,11 @@ const routes = [
 	  component: List
 	},
 	{
-	  path: '/',
+	  path: '/noint',
 	  component: NoInt
 	},
   {
-    path: '/login',
+    path: '/',
     component: Login
   },
   {
