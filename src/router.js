@@ -8,7 +8,8 @@ import SetPwd from './views/Register/SetPwd/setPwd.vue'
 import NoInt from './views/NoInt/noInt.vue'
 import List from './views/List/list.vue'
 import PullRefresh from './views/PullRefresh/pullRefresh.vue'
-
+import Center from './views/Center/CenterInfo/centerInfo.vue'
+import UserInfo from './views/Center/UserInfo/userInfo.vue'
 Vue.use(Router)
  
 
@@ -22,11 +23,11 @@ const routes = [
 	  component: List
 	},
 	{
-	  path: '/noint',
+	  path: '/noInt',
 	  component: NoInt
 	},
   {
-    path: '/',
+    path: '/login',
     component: Login
   },
   {
@@ -44,6 +45,14 @@ const routes = [
   {
     path: '/verification',
     component: Verification
+  },
+  {
+	  path: '/',
+	  component: Center
+  },
+  {
+    path:'/userInfo',
+    component:UserInfo
   }
 ]
 
