@@ -9,18 +9,18 @@
           <van-col span="4" class="icon">
             <van-icon name="wap-home" />
           </van-col>
-          <van-col span="4" offset="16" class="icon" @click="setting">
-            <van-icon name="setting-o"/>
+          <van-col span="4" offset="16" class="icon">
+            <van-icon name="setting-o"  @click="setting"/>
           </van-col>
         </van-row>
       </div>
-      <div class="image"   @click="setInfo">
+      <div class="image"  @click="setInfo">
         <img src="https://img.yzcdn.cn/vant/cat.jpeg" alt />
       </div>
       <div class="nickName">nickName</div>
     </div>
     <div class="list">
-      <div>
+      <div  @click="help">
           <van-row type="flex" justify="center">
         <van-col span="6" class="icon">
             <van-icon name="question-o" />
@@ -47,7 +47,10 @@ export default {
           this.$router.push('userInfo')
       },
       setting:function(){
-          
+          this.$router.push('setting')
+      },
+      help:function(){
+        this.$router.push('help')
       }
   }
 };

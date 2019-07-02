@@ -31,6 +31,7 @@ export default {
 <style scoped>
 .top{
   padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom:1px solid #ccc;
 }
 .top-title{

@@ -10,6 +10,12 @@ import List from './views/List/list.vue'
 import PullRefresh from './views/PullRefresh/pullRefresh.vue'
 import Center from './views/Center/CenterInfo/centerInfo.vue'
 import UserInfo from './views/Center/UserInfo/userInfo.vue'
+import Setting from './views/Center/Setting/setting.vue'
+import ChangePhoneNum from './views/Center/Setting/ChangePhoneNum/changePhoneNum.vue'
+import Code from './views/Center/Setting/Code/code.vue'
+import ChangePhone from './views/Center/Setting/changePhone.vue'
+import Help from './views/Center/Help/help.vue'
+import HelpDetail from './views/Center/Help/HelpDetail/helpDetail.vue'
 Vue.use(Router)
  
 
@@ -53,6 +59,30 @@ const routes = [
   {
     path:'/userInfo',
     component:UserInfo
+  },
+  {
+    path:'/setting',
+    component:Setting
+  },
+  {
+    path:'/changePhoneNum',
+    component:ChangePhoneNum
+  },
+  {
+    path:'/code',
+    component:Code
+  },
+  {
+    path:'/changePhone',
+    component:ChangePhone
+  },
+  {
+    path:'/help',
+    component:Help
+  },
+  {
+    path:'/helpDetail',
+    component:HelpDetail
   }
 ]
 
