@@ -1,6 +1,6 @@
 <template>
   <div>
-    <top-head :headTitle="headTitle"></top-head>
+    <van-nav-bar title="更换手机号" left-arrow @click-left="onClickLeft"/>
     <van-cell-group>
       <van-field
         v-model="userPhone"
@@ -87,6 +87,9 @@ export default {
           }
         }, 1000);
       }
+    },
+    onClickLeft:function(){
+      this.$router.go(-1)
     }
   }
 };

@@ -10,6 +10,7 @@ import '../src/style/style.css'
 
 
 
+
 Vue.use(Vant);
 
 Vue.config.productionTip = false

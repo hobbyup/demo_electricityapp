@@ -1,6 +1,6 @@
 <template>
   <div>
-    <top-head :headTitle="headTitle"></top-head>
+    <van-nav-bar title="个人中心" left-arrow @click-left="onClickLeft"/>
     <div class="info-list">
       <van-row type="flex" justify="center" class="info-text">
         <van-col span="6">头像</van-col>
@@ -116,6 +116,9 @@ export default {
     onSexConfirm: function(value, index) {
       this.userSex = value;
       this.sexShow = false;
+    },
+    onClickLeft:function(){
+      this.$router.go(-1)
     }
   }
 };

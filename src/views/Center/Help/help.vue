@@ -1,6 +1,6 @@
 <template>
   <div class="info-list">
-    <top-head :headTitle="headTitle"></top-head>
+   <van-nav-bar title="帮助与反馈" left-arrow @click-left="onClickLeft"/>
 
     <div @click="toList">
       <van-row type="flex" justify="center" class="info-text">
@@ -11,7 +11,7 @@
         </van-col>
       </van-row>
     </div>
-    <div>
+    <div @click="opinion">
       <van-row type="flex" justify="center" class="info-text">
         <van-col span="6">意见反馈</van-col>
         <van-col span="10" offset="10" class="info"></van-col>
@@ -64,6 +64,12 @@ export default {
     toList:function(){
         console.log(11)
         this.$router.push('helpDetail')
+    },
+    opinion:function(){
+      this.$router.push('opinion');
+    },
+    onClickLeft:function(){
+      this.$router.go(-1);
     }
   }
 };

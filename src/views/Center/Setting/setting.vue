@@ -1,6 +1,6 @@
 <template :style="{background:#000}">
   <div>
-    <top-head :headTitle="headTitle"></top-head>
+    <van-nav-bar title="设置" left-arrow @click-left="onClickLeft"/>
     <div class="setting-main">
       <div @click="changePhoneNum">
         <van-row type="flex" justify="center" class="info-text">
@@ -83,6 +83,9 @@ export default {
         .catch(() => {
           // on cancel
         });
+    },
+    onClickLeft:function(){
+      this.$router.go(-1)
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <top-head :headTitle="headTitle"></top-head>
+    <van-nav-bar title="有什么需要帮助的?" left-arrow @click-left="onClickLeft"/>
     <div class="setting-main">
       <div>
         <van-row type="flex" justify="center" class="info-text">
@@ -31,6 +31,11 @@ export default {
   },
   components: {
     topHead
+  },
+  methods:{
+    onClickLeft:function(){
+      this.$router.go(-1)
+    }
   }
 };
 </script>

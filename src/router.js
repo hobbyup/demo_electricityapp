@@ -16,10 +16,16 @@ import Code from './views/Center/Setting/Code/code.vue'
 import ChangePhone from './views/Center/Setting/changePhone.vue'
 import Help from './views/Center/Help/help.vue'
 import HelpDetail from './views/Center/Help/HelpDetail/helpDetail.vue'
+import Opinion from './views/Center/Opinion/opinion.vue'
+import Index from './views/Index/index.vue'
 Vue.use(Router)
  
 
 const routes = [
+  {
+	  path: '/',
+	  component: Index
+	},
 	{
 	  path: '/pullRefresh',
 	  component: PullRefresh
@@ -53,7 +59,7 @@ const routes = [
     component: Verification
   },
   {
-	  path: '/',
+	  path: '/center',
 	  component: Center
   },
   {
@@ -83,6 +89,10 @@ const routes = [
   {
     path:'/helpDetail',
     component:HelpDetail
+  },
+  {
+    path:'/opinion',
+    component:Opinion
   }
 ]
 

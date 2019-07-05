@@ -1,6 +1,6 @@
 <template>
   <div>
-    <top-head :headTitle="headTitle"></top-head>
+    <van-nav-bar title="验证手机" left-arrow @click-left="onClickLeft"/>
     <van-row type="flex" justify="center">
       <van-col span="18" class="code-text">请输入手机188XXXX8525收到的短信验证码</van-col>
     </van-row>
@@ -70,6 +70,9 @@ export default {
           clearInterval(auth_timetimer);
         }
       }, 1000);
+    },
+    onClickLeft:function(){
+      this.$router.go(-1);
     }
   }
 };

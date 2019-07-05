@@ -1,6 +1,6 @@
 <template>
   <div>
-    <top-head :headTitle="headTitle"></top-head>
+    <van-nav-bar title="手机号" left-arrow @click-left="onClickLeft"/>
     <div class="main">
       <van-row type="flex" justify="center">
         <van-col span="2">
@@ -34,6 +34,9 @@ export default {
   methods:{
       changeNum:function(){
           this.$router.push('code')
+      },
+      onClickLeft:function(){
+        this.$router.go(-1)
       }
   }
 };

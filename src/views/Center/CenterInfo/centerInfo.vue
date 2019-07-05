@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <v-head>个人中心</v-head>
+      <van-nav-bar title="个人中心" left-arrow/>
     </div>
     <div class="box">
       <div>
