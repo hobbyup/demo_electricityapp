@@ -14,15 +14,11 @@
       <van-swipe-item>3</van-swipe-item>
       <van-swipe-item>4</van-swipe-item>
     </van-swipe>
-    <van-grid>
-  <van-grid-item
-    v-for="value in 4"
-    :key="value"
-    icon="photo-o"
-    text="文字"
-  />
-</van-grid>
-
+   
+    <van-grid :gutter="10">
+      <van-grid-item v-for="value in 8" :key="value" icon="photo-o" text="文字" />
+    </van-grid>
+     <store></store>
     <van-tabbar v-model="active" class="active_tab">
       <van-tabbar-item v-for="(item,index) in tabbars" :key="index" @click="tab(index,item.name)">
         <span :class="currIndex == index ? active:''">{{item.title}}</span>
@@ -34,6 +30,7 @@
   </div>
 </template>
 <script>
+import Store from '../../components/store.vue'
 export default {
   name: "tabbar",
   data() {
@@ -74,6 +71,9 @@ export default {
     onChange(index) {
       this.current = index;
     }
+  },
+  components:{
+    Store
   }
 };
 </script>
@@ -99,20 +99,20 @@ export default {
     color: #fff;
     
 } */
+.van-swipe {
+  margin-bottom: 0.8rem;
+}
 .van-swipe-item {
   color: #fff;
   font-size: 20px;
   line-height: 150px;
   text-align: center;
 }
-.van-grid {
-  display: flex;
-  flex-wrap: wrap;
+.info-name{
+  font-size: .5rem;
 }
-.van-grid-item {
-  height: 30px;
-  position: relative;
-  box-sizing: border-box;
-  flex-basis: 25%;
+.info{
+  padding: 0 0.5rem;
+  margin:0.8rem 0;
 }
 </style>
